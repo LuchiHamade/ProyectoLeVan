@@ -1,1 +1,18 @@
 /* importar el styles.css */
+@import url(styles.css);
+header{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 50px;
+}
+#navUl{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 25px; 
+    border: 1px solid black;
+    
+}
+li{
+   padding: 10px;
+}
