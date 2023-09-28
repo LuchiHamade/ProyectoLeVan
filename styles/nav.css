@@ -3,6 +3,7 @@
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-inline: 50px;
 }
 #navUl{
@@ -14,7 +15,10 @@ header{
     background-color: #69c469;
 }
 li{
+    display: flex;
+    align-items: center;
     padding: 5px;
-    padding-inline-end: 105px;
+    padding-inline-end: 140px;
     cursor: pointer;
+    height: 50px;
 }
