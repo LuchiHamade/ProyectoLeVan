@@ -1,6 +1,8 @@
 /* importar el styles.css */
 @import url(styles.css);
-
+body{
+    background-color: blue;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -25,4 +27,23 @@ li{
     padding-inline-end: 140px;
     cursor: pointer;
     height: 50px;
+}
+
+/* tablet */
+@media (max-width: 900px){
+    body{
+        background-color: red;
+    }
+    #navUl{
+        gap: 10px;
+    }
+    li{
+        padding-inline-end: 45px;
+    }
+}
+/* celular */
+@media(max-width: 500px){
+    body{
+        background-color: aqua;
+    }
 }
