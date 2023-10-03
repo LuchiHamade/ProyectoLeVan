@@ -1,5 +1,6 @@
 /* importar el styles.css */
 @import url(styles.css);
+
 body{
     background-color: blue;
 }
@@ -13,11 +14,15 @@ header{
 #navUl{
     list-style: none;
     display: flex;
-    flex-direction: row;
-    gap: 2rem; 
+    flex-direction: column;
+    gap: 2rem;
     /* border: 1px solid black; */
     background-color: #69c469;
-    width: 95%;
+    width: 200px;
+    position: absolute;
+    left: -200px;
+    top: 3rem;
+    transition: left .3s ease-in-out  ;
 }
 li{
     display: flex;
@@ -28,24 +33,18 @@ li{
     height: 50px;
 }
 
-/* tablet */
-@media (max-width: 900px){
-    body{
-        background-color: red;
-    }
-    #navUl{
-        gap: 1rem;
-    }
-    li{
-        padding-inline-end: 2rem;
-    }
-}
-/* celular */
-@media(max-width: 500px){
-    body{
-        background-color: aqua;
-    }
-    #navUl{
+@media (min-width: 750px){
+    button{
         display: none;
+    }
+
+
+    #navUl {
+        flex-direction: row;
+        width: 400px;
+        margin: 0;
+        right: 0;
+        top: 0;
+        left: 60vw;
     }
 }
