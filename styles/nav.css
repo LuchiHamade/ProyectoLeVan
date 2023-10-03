@@ -14,17 +14,16 @@ header{
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 25px; 
-    border: 1px solid black;
+    gap: 2rem; 
+    /* border: 1px solid black; */
     background-color: #69c469;
     width: 95%;
 }
 li{
-
     display: flex;
     align-items: center;
     padding: 5px;
-    padding-inline-end: 140px;
+    padding-inline-end: 5rem;
     cursor: pointer;
     height: 50px;
 }
@@ -35,15 +34,18 @@ li{
         background-color: red;
     }
     #navUl{
-        gap: 10px;
+        gap: 1rem;
     }
     li{
-        padding-inline-end: 45px;
+        padding-inline-end: 2rem;
     }
 }
 /* celular */
 @media(max-width: 500px){
     body{
         background-color: aqua;
+    }
+    #navUl{
+        display: none;
     }
 }
