@@ -2,14 +2,14 @@
 @import url(styles.css);
 
 body{
-    background-color: blue;
+    background-color: rgb(113, 128, 111);
 }
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-inline: 50px;
-    color:#fff8f8;
+    color:#f0eeee;
 }
 #navUl{
     list-style: none;
@@ -37,7 +37,9 @@ li{
     button{
         display: none;
     }
-
+    body{
+        background-color: rgb(52, 55, 115);
+    }
 
     #navUl {
         flex-direction: row;
@@ -45,6 +47,23 @@ li{
         margin: 0;
         right: 0;
         top: 0;
-        left: 60vw;
+        left: 45vw;
+    }
+}
+@media (min-width: 1300px){
+    button{
+        display: none;
+    }
+    body{
+        background-color: rgb(31, 21, 3);
+    }
+
+    #navUl {
+        flex-direction: row;
+        width: 500px;
+        margin: 0;
+        right: 0;
+        top: 0;
+        left: 55vw;
     }
 }
