@@ -1,5 +1,5 @@
-const navButton = document.querySelector('button')
-const navList = document.querySelector('#navUl')
+const navButton = document.getElementById('hamburguer')
+const navList = document.getElementById('navUl')
 
 navButton.onclick = () => {
     const styles = getComputedStyle(navList)
