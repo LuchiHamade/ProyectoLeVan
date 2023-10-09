@@ -1,1 +1,12 @@
 /* importar el styles.css */
+@import url(styles.css);
+
+main{
+    background-image: url(../assets/image/levanBG.jpeg);
+    z-index: 1;
+    height: 90vh;
+}
+#superposicion{
+    z-index: 10;
+    background-color:aqua;
+}
