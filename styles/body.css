@@ -2,6 +2,7 @@
 @import url(styles.css);
 body{
     position: absolute;
+    width: 400px;
 }
 main{
     background-image: url(../assets/image/levanBG.jpeg);
@@ -9,13 +10,28 @@ main{
     height: 90vh;
     position: relative;
     top: 50px;
-    width: 100vh;
+    width: 400px;
 }
 #superposicion{
     z-index: 10;
-    background-color:aqua;
-    width: 40vh;
+    width: 150px;
     position: relative;
-    left: 270px;
+    left: 140px;
     top: 250px;
+    background-image: url(../assets/image/imgFondotexto.png);
+}
+
+@media (min-width: 750px) {
+    body{
+        width: 900px;
+    }
+    main{
+        width: auto;
+    }
+    #superposicion{
+        width: 350px;
+        height: 160px;
+        left: 380px;
+        top: 520px;
+    }
 }
