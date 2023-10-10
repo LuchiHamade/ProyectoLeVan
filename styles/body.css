@@ -1,12 +1,21 @@
 /* importar el styles.css */
 @import url(styles.css);
-
+body{
+    position: absolute;
+}
 main{
     background-image: url(../assets/image/levanBG.jpeg);
     z-index: 1;
     height: 90vh;
+    position: relative;
+    top: 50px;
+    width: 100vh;
 }
 #superposicion{
     z-index: 10;
     background-color:aqua;
+    width: 40vh;
+    position: relative;
+    left: 270px;
+    top: 250px;
 }
