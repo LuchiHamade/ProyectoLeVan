@@ -1,7 +1,7 @@
 /* importar el styles.css */
 @import url(styles.css);
 
-main{
+body{
     background-image: url(../assets/image/levanBG.jpeg);
     z-index: 1;
     height: 90vh;
@@ -16,12 +16,12 @@ main{
     left: 140px;
     top: 250px;
     background-image: url(../assets/image/imgFondotexto.png);
-   
+
 }
 
 @media (min-width: 750px) {
     
-    main{
+    body{
         width: auto;
         background-size: cover;
     }
@@ -41,7 +41,7 @@ main{
 }
 @media (min-width: 1300px){
     
-    main{
+    body{
         width: auto;
         background-size: cover;
     }
