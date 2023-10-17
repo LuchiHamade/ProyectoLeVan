@@ -11,9 +11,9 @@ navButton.onclick = () => {
     }
 }
 
-window.onresize( () => {
-    if(clientWidth > 760){
-        navList.style.left = '60vw'
+window.onresize =  () => {
+    if(window.innerWidth > 760){
+        navList.stoyle.left = '60vw'
 
     }
-})
+}
