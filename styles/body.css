@@ -48,6 +48,7 @@ body{
         left: -70px;
         z-index: -2;
         width: 480px;
+    }
 }
 @media (min-width: 1300px){
     
@@ -57,7 +58,15 @@ body{
     }
     #superposicion{
         
-        left: 780px;
-        top: 250px;
+        left: 300px;
+        top: 450px;
+    }
+
+    #fondoSvg{
+        position: relative;
+        top: -290px;
+        left: -70px;
+        z-index: -2;
+        width: 480px;
     }
 }
