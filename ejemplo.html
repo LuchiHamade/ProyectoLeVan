@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History push</title>
+    <style>
+        html{
+            display: grid;
+            place-items: center;
+        }
+        div{
+            display: flex;
+            width: 50%;
+            font-size: 2rem;
+            gap: 3rem;
+            & span{
+                cursor: pointer;
+            }
+        }
+        figure{
+            width: 58vw;
+            height: 60vh;
+            background-repeat: no-repeat;
+            transition: background-image .3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>INICIO</span>
+        <span>MENU</span>
+        <span>CONTACTO</span>
+    </div>
+
+    <figure></figure>
+    <script>
+        const PICTURES = {
+            start: 'https://cdn-icons-png.flaticon.com/512/5261/5261298.png',
+            contact: 'https://i.blogs.es/3910a2/contact-20cartel/450_1000.jpg',
+            menu:'https://c8.alamy.com/compes/d6e59p/menu-de-sushi-en-tokio-japon-d6e59p.jpg'
+        }
+
+        const figure = document.querySelector('figure')
+        ///
+
+        const doSomethingAccordingToURL = ()=>{
+            const {pathname} = window.location;
+
+            switch(pathname){
+                case '/':
+                    figure.style.backgroundImage = `url(${PICTURES.start})`
+                    break;
+                case '/CONTACTO':
+                    figure.style.backgroundImage = `url(${PICTURES.contact})`
+                    break;
+                case '/MENU':
+                    figure.style.backgroundImage = `url(${PICTURES.menu})`
+                    break;
+            }
+        }
+        
+        const spans = document.querySelectorAll('span')
+        spans.forEach( (node)=>{
+            node.onclick = (e) => {
+                const content = e.target.textContent
+                window.history.pushState({}, content, content == 'INICIO' ? ' /' : content)
+                doSomethingAccordingToURL()
+            }
+        })
+
+        window.onload = ()=> doSomethingAccordingToURL()
+    </script>
+</body>
+</html>
