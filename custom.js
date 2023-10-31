@@ -14,8 +14,9 @@ navButton.onclick = () => {
 window.onresize =  () => {
     if(window.innerWidth > 760){
         navList.stoyle.left = '60vw'
-
+        
     }
+}
 
     const PICTURES = {
         inicio: 'https://pixabay.com/es/photos/bolas-de-sushi-comida-japonesa-5878892',
@@ -23,26 +24,26 @@ window.onresize =  () => {
         menu:'https://pixabay.com/es/photos/sushi-vegetariano-verduras-arroz-2112350/',
     }
 
-    const figure = document.querySelector('figure')
+    const body = document.querySelector('body')
 
     const doSomethingAccordingToURL = ()=>{
         const {pathname} = window.location;
 
         switch(pathname){
             case '/':
-                figure.style.backgroundImage = `url(${PICTURES.start})`
+                body.style.backgroundImage = `url(${PICTURES.start})`
                 break;
             case '/CONTACTO':
-                figure.style.backgroundImage = `url(${PICTURES.contact})`
+                body.style.backgroundImage = `url(${PICTURES.contact})`
                 break;
             case '/MENU':
-                figure.style.backgroundImage = `url(${PICTURES.menu})`
+                body.style.backgroundImage = `url(${PICTURES.menu})`
                 break;
         }
     }
     
-    const spans = document.querySelectorAll('span')
-    spans.forEach( (node)=>{
+    const li = document.querySelectorAll('li')
+    li.forEach( (node)=>{
         node.onclick = (e) => {
             const content = e.target.textContent
             window.history.pushState({}, content, content == 'INICIO' ? ' /' : content)
@@ -51,4 +52,3 @@ window.onresize =  () => {
     })
 
     window.onload = ()=> doSomethingAccordingToURL()
-}

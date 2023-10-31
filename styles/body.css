@@ -2,7 +2,7 @@
 @import url(styles.css);
 
 body{
-    background-image: url(../assets/image/levanBG.jpeg);
+    /* background-image: url(../assets/image/levanBG.jpeg); */
     height: 90vh;
     top: 50px;
     width: auto;
