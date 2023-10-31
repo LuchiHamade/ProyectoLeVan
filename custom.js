@@ -19,9 +19,9 @@ window.onresize =  () => {
 }
 
     const PICTURES = {
-        inicio: 'https://pixabay.com/es/photos/bolas-de-sushi-comida-japonesa-5878892',
-        contacto: 'https://pixabay.com/es/photos/sushi-men%C3%BA-restaurante-comida-8113165/',
-        menu:'https://pixabay.com/es/photos/sushi-vegetariano-verduras-arroz-2112350/',
+        inicio: '././assets/images/sushi.inicio.jpg',
+        contacto: '././assets/images/sushi.contacto.jpg',
+        menu:'././assets/images/sushi.menu.jpg',
     }
 
     const body = document.querySelector('body')
@@ -31,19 +31,19 @@ window.onresize =  () => {
 
         switch(pathname){
             case '/':
-                body.style.backgroundImage = `url(${PICTURES.start})`
+                body.styles.backgroundImage = `url(${PICTURES.start})`
                 break;
             case '/CONTACTO':
-                body.style.backgroundImage = `url(${PICTURES.contact})`
+                body.styles.backgroundImage = `url(${PICTURES.contact})`
                 break;
             case '/MENU':
-                body.style.backgroundImage = `url(${PICTURES.menu})`
+                body.styles.backgroundImage = `url(${PICTURES.menu})`
                 break;
         }
     }
     
-    const li = document.querySelectorAll('li')
-    li.forEach( (node)=>{
+    const listItems = document.querySelectorAll('li')
+    listItems.forEach( (node)=>{
         node.onclick = (e) => {
             const content = e.target.textContent
             window.history.pushState({}, content, content == 'INICIO' ? ' /' : content)
