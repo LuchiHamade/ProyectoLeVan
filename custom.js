@@ -13,15 +13,15 @@ navButton.onclick = () => {
 
 window.onresize = () => {
     if (window.innerWidth > 760) {
-        navList.stoyle.left = '60vw'
+        navList.style.left = '60vw'
 
     }
 }
 
 const PICTURES = {
-    inicio: '././assets/images/sushi.inicio.jpg',
-    menu: '././assets/images/sushi.menu.jpg',
-    contacto: '././assets/images/sushi.contacto.jpg',
+    'Inicio': '/assets/images/sushi.inicio.jpg',
+    'Menu': '/assets/images/sushi.menu.jpg',
+    'Contacto': '/assets/images/sushi.contacto.jpg',
 }
 
 const body = document.querySelector('body')
@@ -30,14 +30,14 @@ const doSomethingAccordingToURL = () => {
     const { pathname } = window.location;
 
     switch (pathname) {
-        case '/':
-            body.style.backgroundImage = `url(${PICTURES.inicio})`
+        case '/Inicio':
+            body.style.backgroundImage = `url(${PICTURES.Inicio})`
             break;
-        case '/MENU':
-            body.style.backgroundImage = `url(${PICTURES.menu})`
+        case '/Menu':
+            body.style.backgroundImage = `url(${PICTURES.Menu})`
             break;
-        case '/CONTACTO':
-            body.style.backgroundImage = `url(${PICTURES.contacto})`
+        case '/Contacto':
+            body.style.backgroundImage = `url(${PICTURES.Contacto})`
             break;
     }
 }
@@ -46,7 +46,7 @@ const listItems = document.querySelectorAll('li')
 listItems.forEach((node) => {
     node.onclick = (e) => {
         const content = e.target.textContent
-        window.history.pushState({}, content, content == 'INICIO' ? ' /' : content)
+        window.history.pushState({}, content, content == 'inicio' ? '/' : content)
         doSomethingAccordingToURL()
     }
 })
