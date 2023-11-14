@@ -30,7 +30,7 @@ const doSomethingAccordingToURL = () => {
     const { pathname } = window.location;
 
     switch (pathname) {
-        case '/Inicio':
+        case '/':
             body.style.backgroundImage = `url(${PICTURES.Inicio})`
             break;
         case '/Menu':
@@ -46,7 +46,7 @@ const listItems = document.querySelectorAll('li')
 listItems.forEach((node) => {
     node.onclick = (e) => {
         const content = e.target.textContent
-        window.history.pushState({}, content, content == 'inicio' ? '/' : content)
+        window.history.pushState({}, content, content == 'Inicio' ? '/' : content)
         doSomethingAccordingToURL()
     }
 })
