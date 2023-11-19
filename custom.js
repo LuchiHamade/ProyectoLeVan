@@ -5,7 +5,9 @@ navButton.onclick = () => {
     const styles = getComputedStyle(navList)
     const { left } = styles;
     if (left === '-200px') {
-        navList.style.left = 0
+        navList.style.left = 0;
+        navList.style.top = '100px';
+
     } else {
         navList.style.left = '-200px'
     }
