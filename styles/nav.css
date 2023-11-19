@@ -37,16 +37,17 @@ header div{
 li{
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 5px;
     padding-inline-end: 5rem;
     cursor: pointer;
     height: 50px;
-    width: 33.3%;
+    width: 90%;
     text-align: center;
-    
+
 }
 li:hover{
-    background-color: var(--accent);
+    background-color: rgba(0, 0, 0, 0.212);
 }
 #hamburguer{
     padding: 2px;
