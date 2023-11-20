@@ -2,7 +2,7 @@
 @import url(styles.css);
 
 body{
-     /* background-image: url(../assets/image/levanBG.jpeg);  */
+    background-size: cover;
     height: 90vh;
     top: 50px;
     width: auto;
@@ -13,7 +13,7 @@ body{
     position: relative;
     left: 131px;
     top: 304px;
-    /* background-image: url(../assets/image/imgFondotexto.png); */
+  
 }
 #fondoSvg{
     position: relative;
@@ -37,12 +37,12 @@ body{
     #titulo{
         font-size: 35px;
         text-align: center;
-        color:white;
+        color:black;
         
     }
     #presentacion{
         font-size: 20px;
-        color:white;
+        color:black;
     }
     #fondoSvg{
         position: relative;

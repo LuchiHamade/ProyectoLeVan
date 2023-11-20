@@ -69,17 +69,23 @@ li:hover{
         padding: 0 4rem;
         display: flex;
         width: auto;
-    }
 
+    }
+   
     #navUl {
+        display: flex;
         flex-direction: row;
         width: 400px;
         margin: 0;
-        right: 0;
+        right: 150px;
         top: 0;
         left: 45vw;
     }
-
+    li{
+        display: flex;
+        width: 80%;
+    
+    }
     header div{
         margin-left: 0;
     }
