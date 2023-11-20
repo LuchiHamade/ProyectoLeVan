@@ -60,14 +60,14 @@ body{
     }
     #superposicion{
         
-        left: 300px;
-        top: 450px;
+        left: 550px;
+        top: 350px;
     }
 
     #fondoSvg{
         position: relative;
         top: -290px;
-        left: -70px;
+        left: -120px;
         z-index: -2;
         width: 480px;
     }

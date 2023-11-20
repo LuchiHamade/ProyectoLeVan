@@ -54,3 +54,5 @@ listItems.forEach((node) => {
 })
 
 window.onload = () => doSomethingAccordingToURL()
+
+const presentacion = document.getElementById('presentacion')
