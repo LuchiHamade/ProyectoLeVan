@@ -28,6 +28,10 @@ const PICTURES = {
 
 const body = document.querySelector('body')
 const presentacion = document.getElementById('presentacion')
+const inicio = document.getElementById('inicioCombos')
+
+const contacto = document.getElementById('datosContacto')
+
 
 const doSomethingAccordingToURL = () => {
     const { pathname } = window.location;
@@ -40,14 +44,17 @@ const doSomethingAccordingToURL = () => {
         case '/Menu':
             body.style.backgroundImage = `url(${PICTURES.Menu})`
             presentacion.innerHTML = '<p>En esta seccion encontras nuestro menu completo</p>'
+            
             break;
         case '/Contacto':
             body.style.backgroundImage = `url(${PICTURES.Contacto})`
-            presentacion.innerHTML= '<p>Aqui podras ver nuestras formas de contacto</p>'
+            presentacion.innerHTML = '<p>Aqui podras ver nuestras formas de contacto</p>'
 
             break;
     }
 }
+
+
 
 const listItems = document.querySelectorAll('li')
 listItems.forEach((node) => {
