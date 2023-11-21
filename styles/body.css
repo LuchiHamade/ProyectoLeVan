@@ -1,22 +1,22 @@
 /* importar el styles.css */
 @import url(styles.css);
 
-.background{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+html{
+    overflow-x: hidden;
+}
+main{
+    height: 100vh;
     background-size: cover;
     transform: translate(90deg);
     background-repeat: no-repeat;
+    z-index: -1;
 }
 body{
     background-size: cover;
-    height: 90vh;
     top: 50px;
     width: auto;
 }
+
 #superposicion{
     z-index: 10;
     width: 207px;
@@ -41,6 +41,26 @@ body{
 #fondoSvg.rotatedMinus180{
     transform: rotate(-164deg);
 }
+.menu{
+    background-color: antiquewhite;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.card>img{
+    width: 100%;
+    height: auto;
+}
+
 @media (min-width: 750px) {
     
     body{
