@@ -26,8 +26,9 @@ const PICTURES = {
     'Contacto': '/assets/images/sushi.contacto.jpg',
 }
 
-const body = document.querySelector('body')
+const body = document.querySelector('.background')
 const presentacion = document.getElementById('presentacion')
+const svg = document.querySelector('#fondoSvg')
 
 const doSomethingAccordingToURL = () => {
     const { pathname } = window.location;
@@ -36,15 +37,20 @@ const doSomethingAccordingToURL = () => {
         case '/':
             body.style.backgroundImage = `url(${PICTURES.Inicio})`
             presentacion.innerHTML = '<p>Bienvenidos a levan sushi, en nuestra web vas a encontrar todos nuestros combos y muchas mas cosas</p>'
+            svg.classList.remove('rotatedMinus180')
+            svg.classList.remove('rotated90')
             break;
         case '/Menu':
             body.style.backgroundImage = `url(${PICTURES.Menu})`
             presentacion.innerHTML = '<p>En esta seccion encontras nuestro menu completo</p>'
+            svg.classList.remove('rotatedMinus180')
+            svg.classList.add('rotated90')
             break;
         case '/Contacto':
             body.style.backgroundImage = `url(${PICTURES.Contacto})`
             presentacion.innerHTML= '<p>Aqui podras ver nuestras formas de contacto</p>'
-
+            svg.classList.remove('rotated90')
+            svg.classList.add('rotatedMinus180')
             break;
     }
 }
