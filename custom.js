@@ -48,6 +48,8 @@ const doSomethingAccordingToURL = () => {
             svg.classList.remove('rotatedMinus180')
             svg.classList.add('rotated90')
             fillMenu()
+            saucesMenu()
+            chisaMenu()
             break;
         case '/Contacto':
             body.style.backgroundImage = `url(${PICTURES.Contacto})`
@@ -101,32 +103,32 @@ const MENU_ITEMS = [
     {
         name: 'Tamago vege',
         photo: './assets/images/tamagovegieroll-02.png',
-        description: 'Tamago, palmitos, morron asado, queso c.'
+        description: 'Tamago, palmitos, morron asado, queso c. (Vegetariano)'
     },
     {
         name: 'Caprese',
         photo: './assets/images/capreseroll.jpg',
-        description: 'Tomate, albahac, queso c, coronado con praline'
+        description: 'Tomate, albahac, queso c, coronado con praline (Vegetariano).'
     },
     {
         name: 'Green',
         photo: './assets/images/greenroll.jpg',
-        description: 'Queso, tomate deshidratado, envuelto en crepe de espinaca.'
+        description: 'Queso, tomate deshidratado, envuelto en crepe de espinaca. (Vegetariano).'
     },
     {
         name: 'Vegetariano',
         photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Pepino, zanahoria, palta.'
+        description: 'Pepino, zanahoria, palta. '
     },
     {
         name: 'Uramaki Arcoiris',
         photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Remolacha, tomate, palta y mousse de remolacha'
+        description: 'Remolacha, tomate, palta y mousse de remolacha. (Veggie)'
     },
     {
         name: 'Futomaki Champion',
         photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Champiñones salteados con cebolla, morron y ajo. Coronado con chips de papa.'
+        description: 'Champiñones salteados con cebolla, morron y ajo. Coronado con chips de papa. (Veggie)'
     },
     {
         name: 'Playa',
@@ -134,103 +136,163 @@ const MENU_ITEMS = [
         description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
     },
     {
-        name: 'Playa',
+        name: 'Caribeño',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: 'Langostino, guacamole rebozado.'
+    },
+    {
+        name: 'Krack Chicken',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: 'Pollo marinado, rebozado y panceta crocante.'
+    },
+    {
+        name: 'Criollo',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: 'Solomillo de cerdo salteado con cebolla morada y morron. Rebozado.'
+    },
+    {
+        name: 'Origenes',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: 'Salmon, langostino y queso crema envuelto en tamago.'
+    },
+    {
+        name: 'Hot roll',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: 'Langostino crocante y salmon ahumado.'
+    },
+    {
+        name: 'Mardel',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: 'Pesca blanca, pepino, y queso c. Rebozado y frito coronado con limon.'
+    },
+    {
+        name: 'Salmon (6p)',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: ''
+    },
+    {
+        name: 'Langostino',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: ''
+    },
+    {
+        name: 'Kanikama',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: ''
+    },
+    {
+        name: 'Vegetariano',
         photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
         description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
     },
     {
-        name: 'Playa',
+        name: 'Salmon',
         photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
+        description: 'Niguiri x3.'
     },
     {
-        name: 'Playa',
+        name: 'S. Ahumado',
         photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
+        description: 'Niguiri x3.'
     },
     {
-        name: 'Playa',
+        name: 'Langostino',
         photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
+        description: 'Niguiri x3.'
     },
     {
-        name: 'Playa',
+        name: 'Kanikama',
         photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
+        description: 'Niguiri x3.'
     },
     {
-        name: 'Playa',
+        name: 'Vegetariano',
         photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
+        description: 'Niguiri x3.'
     },
     {
-        name: 'Playa',
+        name: 'Geishas',
         photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
+        description: 'Niguiri x3.'
     },
-    {
-        name: 'Playa',
-        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
-    },
-    {
-        name: 'Playa',
-        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
-    },
-    {
-        name: 'Playa',
-        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
-    },
-    {
-        name: 'Playa',
-        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
-    },
-    {
-        name: 'Playa',
-        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
-    },
-    {
-        name: 'Playa',
-        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
-    },
-    {
-        name: 'Playa',
-        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
-    },
-    {
-        name: 'Playa',
-        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
-    },
-    {
-        name: 'Playa',
-        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
-    },
-    {
-        name: 'Playa',
-        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
-    },
-    {
-        name: 'Playa',
-        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
-    },
-    {
-        name: 'Playa',
-        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
-        description: 'Futomaki-solomillo de cerdo salteado en morron y cebolla, mozzarella, rebozado y frito.'
-    }
-   
 ]
+const SALSAS = [
 
+    {
+        name: 'Ostras',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: 'No apta celiacos.'
+    },
+    {
+        name: 'Maracuya',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: ''
+    },
+    {
+        name: 'Soja',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: ''
+    },
+    {
+        name: 'Teriyaki',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: ''
+    },
+    {
+        name: 'Mayonesa de wasabi',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: ''
+    },
+    {
+        name: 'Mostaza y miel',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: ''
+    },
+    {
+        name: 'Mousse de remolacha',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: ''
+    },
+    {
+        name: 'Agridulce de tomate',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: ''
+    },
+    {
+        name: 'Jengibre encurtido',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: ''
+    }
+
+]
+const CHIRASHI = [
+    {
+        name: 'Cooked',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: 'Arroz shari, sesamo, tiras de algas nori, queso crema, palta, lomo de atun, salmon grill y verdep.'
+    },
+    {
+        name: 'Mar',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: 'Arroz shari, sesamo, tiras de alga nori, queso crema, palta, langostino, salmon, kanikama.'
+    },
+    {
+        name: 'Tierra',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: 'Arroz shari, sesamo, tiras de alga nori, solomillo de cerdoy pechuga de pollo salteado con morron, cebolla, jengibre y ajo, tiras de tamago.'
+    },
+    {
+        name: 'Primavera',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: 'Arroz shari, sesamo, tiras de alga nori, queso crema, palta, tomate, zanahoria, pepino.'
+    },
+    {
+        name: 'Hot',
+        photo: 'https://images.zeald.com/site/redwasabi/images/sushi-354628_1920.jpg',
+        description: 'Arroz shari, sesamo, tiras de alga nori, queso crema, palta, salmon y langostinos rebozados, kanikama crocante.'
+    },
+]
+    
 const createMenuCard = (obj)=>{
     const {name, photo, description} = obj;
     const card = document.createElement('div')
@@ -249,5 +311,7 @@ const createMenuCard = (obj)=>{
 }
 
 const fillMenu = () => MENU_ITEMS.forEach((item)=> createMenuCard(item))
+const saucesMenu = () => SALSAS.forEach((item)=> createMenuCard(item))
+const chisaMenu = () => CHIRASHI.forEach((item)=> createMenuCard(item))
 
 const emptyMenu = () => menu.innerHTML = ''
