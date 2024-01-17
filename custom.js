@@ -30,6 +30,7 @@ const body = document.querySelector('main')
 const presentacion = document.getElementById('presentacion')
 const svg = document.querySelector('#fondoSvg')
 const menu = document.querySelector('.menu')
+const combos = document.querySelector('.inicio')
 
 const doSomethingAccordingToURL = () => {
     const { pathname } = window.location;
@@ -40,6 +41,7 @@ const doSomethingAccordingToURL = () => {
             presentacion.innerHTML = '<p>Bienvenidos a levan sushi, en nuestra web vas a encontrar todos nuestros combos y muchas mas cosas</p>'
             svg.classList.remove('rotatedMinus180')
             svg.classList.remove('rotated90')
+            combosLev()
             emptyMenu()
             break;
         case '/Menu':
@@ -50,14 +52,15 @@ const doSomethingAccordingToURL = () => {
             fillMenu()
             saucesMenu()
             chisaMenu()
+            emptyCombo()
             break;
         case '/Contacto':
             body.style.backgroundImage = `url(${PICTURES.Contacto})`
-            presentacion.innerHTML= '<p>Aqui podras ver nuestras formas de contacto</p>'
+            presentacion.innerHTML = '<p>Aqui podras ver nuestras formas de contacto</p>'
             svg.classList.remove('rotated90')
             svg.classList.add('rotatedMinus180')
             emptyMenu()
-
+            emptyCombo()
             break;
     }
 }
@@ -73,6 +76,100 @@ listItems.forEach((node) => {
 
 window.onload = () => doSomethingAccordingToURL()
 
+const COMBOS = [
+    {
+        nombre: 'Combo clasico (16 o 32p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'New York, Philadelphia, California y Atun.'
+    },
+    {
+        nombre: 'Combo clasico 2 (12 o 24p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'New York, California y Niguiris.'
+    },
+    {
+        nombre: 'Combo LeVan (16 o 32p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'Criollo, Caribeño, Tamago Vege y Krack Chicken.'
+    },
+    {
+        nombre: 'Combo Lovers (15 o 30p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'New York, Origenes, Hosomaki, Geishas y Niguiris.'
+    },
+    {
+        nombre: 'Combo Verano (30p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'MDQ Cool, Atun, Salmon Grill, Maki-salmon y niguiris.'
+    },
+    {
+        nombre: 'Combo Mundial (32p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'Italia, Francia, Tuna y niguiris flameado de salmon.'
+    },
+    {
+        nombre: 'Combo Elite (15 o 30p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'Origenes, Hot Roll, Salmon grill y Geishas.'
+    },
+    {
+        nombre: 'Combo Veggi life (12 o 24p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'Tamago vege, Vegetariano y Caprese.'
+    },
+    {
+        nombre: 'Combo Vegano (30p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'Champion, Arcoiris, Vegetariano y Hosomaki.'
+    },
+    {
+        nombre: 'Combo Fusion (32p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'New York, Criollo, Caprese y Hot Roll.'
+    },
+    {
+        nombre: 'Combo Picadito (48p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'New York, Salmon Grill, Atun, Philadelphia, California, Vegetariano, Maki-Vegue, Niguiris salmon y Niguiris Kanikama'
+    },
+    {
+        nombre: 'Combo Familiar (68p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'New York, California, Atun, Philadelphia, Salmon Grill, Vegetariano, Maki-salmon, Maki-vegue, Niguiris salmon y Niguiris kanikama.'
+    },
+    {
+        nombre: 'Combo City (30p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'Mardel, California, Maki-salmon, Niguiris kanikama y Niguiris langostino'
+    },
+    {
+        nombre: 'Combo Niguiris (12p)',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'Salmon, Salmon ahumado, Kanikama y Langostinos'
+    },
+    {
+        nombre: 'Combo Clasicas del mar',
+        photo: './assets/images/californiaroll.jpg',
+        description: '12 piezas clasicas + 6 langostinos rebozados'
+    },
+    {
+        nombre: 'Combo Empanaditas',
+        photo: './assets/images/californiaroll.jpg',
+        description: '4 Arrolladitos primavera de carne/verdura'
+    },
+    {
+        nombre: 'Combo Crispy de salmon',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'Bolitas de salmon rebozado y frito mas mayonesa de wasabi'
+    },
+    {
+        nombre: 'Combo Lang rebozados',
+        photo: './assets/images/californiaroll.jpg',
+        description: 'Langostinos rebozados en panko y fritos'
+    },
+
+
+]
 
 const MENU_ITEMS = [
     {
@@ -292,9 +389,25 @@ const CHIRASHI = [
         description: 'Arroz shari, sesamo, tiras de alga nori, queso crema, palta, salmon y langostinos rebozados, kanikama crocante.'
     },
 ]
-    
-const createMenuCard = (obj)=>{
-    const {name, photo, description} = obj;
+
+const createCombo = (obj) => {
+    const { nombre, photo, description } = obj;
+    const tarjeta = document.createElement('div')
+    const titulo = document.createElement('h2')
+    const desc = document.createElement('span')
+    const imgInit = document.createElement('img')
+    card.setAttribute('class', 'tarjeta')
+    titulo.textContent = nombre;
+    desc.textContent = description;
+    imgInit.setAttribute('src', photo)
+    tarjeta.appendChild(titulo)
+    tarjeta.appendChild(desc)
+    tarjeta.appendChild(imgInit)
+    combos.appendChild(tarjeta)
+}
+
+const createMenuCard = (obj) => {
+    const { name, photo, description } = obj;
     const card = document.createElement('div')
     const title = document.createElement('h2')
     const text = document.createElement('span')
@@ -309,9 +422,13 @@ const createMenuCard = (obj)=>{
     card.appendChild(text)
     menu.appendChild(card)
 }
+const combosLev = () => COMBOS.forEach((item) => createCombo(item))
 
-const fillMenu = () => MENU_ITEMS.forEach((item)=> createMenuCard(item))
-const saucesMenu = () => SALSAS.forEach((item)=> createMenuCard(item))
-const chisaMenu = () => CHIRASHI.forEach((item)=> createMenuCard(item))
+const fillMenu = () => MENU_ITEMS.forEach((item) => createMenuCard(item))
+const saucesMenu = () => SALSAS.forEach((item) => createMenuCard(item))
+const chisaMenu = () => CHIRASHI.forEach((item) => createMenuCard(item))
+
 
 const emptyMenu = () => menu.innerHTML = ''
+const emptyCombo = () => combos.innerHTML = ''
+// const combosInicio = () => 
